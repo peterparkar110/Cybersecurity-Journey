@@ -1,0 +1,17 @@
+# Broken Authentication
+
+Broken Authentication occurs when authentication or session management is poorly implemented, allowing unauthorized access.
+
+### Common Issues:
+
+1.Username Enumeration: Application reveals whether a username exists through different error messages, response sizes, or behavior. Like application send response saying "username already exist"
+
+2.Brute Force: Trying many username/password combinations to find valid credentials. It no RATE-LIMIT is set.
+
+3.Default Credentials: Applications may use credentials such as `admin:admin` if defaults are not changed.
+
+4.Cookie Manipulation: Modifying authentication-related cookies may allow privilege/session and manipulation if they are not properly validated. Some common ones are plain-text cookie , weak hashed cookies , weak encoded cookies , etc.
+
+5.Authentication Bypass: Accessing protected pages or functionality without properly authenticating.
+
+
