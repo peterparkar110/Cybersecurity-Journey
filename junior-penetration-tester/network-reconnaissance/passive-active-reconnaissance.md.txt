@@ -1,0 +1,42 @@
+# Passive & Active Reconnaissance
+
+Reconnaissance is the process of collecting information about a target before exploitation.
+
+## Passive Reconnaissance
+
+Collecting information **without directly interacting with the target**.
+
+### Common Techniques
+
+- **WHOIS** → Domain registration information
+- **nslookup** → DNS information
+- **dig** → Detailed DNS queries
+- **DNSDumpster** → Finds DNS records and subdomains
+- **Shodan** → Finds internet-connected devices/services
+- **Google Dorking** → Finds specific information using search operators
+
+```bash
+whois example.com
+nslookup example.com
+dig example.com
+
+
+## Active Reconnaissance
+
+Collecting information by directly interacting with the target.
+
+## Common Techniques
+Ping → Checks whether a host is reachable
+Traceroute → Shows the path packets take to a target
+Nmap → Discovers hosts, ports and services
+Netcat → Connects to and interacts with network services
+ping TARGET
+traceroute TARGET
+nmap TARGET
+nc TARGET PORT
+
+## Key Difference:
+
+Passive Recon → No direct interaction with target
+
+Active Recon → Direct interaction with target
